@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Study Point Website
+
+Production-ready landing website for Study Point by StackForge, intended for public launch and payment gateway verification on `stackforge.tech`.
+
+## Tech Stack
+
+- Next.js App Router
+- Tailwind CSS
+- Plain React components
+- Static policy pages
+- No backend, login, signup, or payment integration
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Build for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Run lint checks:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` - Home
+- `/privacy-policy` - Privacy Policy
+- `/terms-and-conditions` - Terms and Conditions
+- `/refund-policy` - Refund and Cancellation Policy
+- `/contact` - Contact and support form UI
 
-## Deploy on Vercel
+## Deploy to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install the Vercel CLI if needed:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install -g vercel
+```
+
+Deploy the project:
+
+```bash
+vercel
+```
+
+Deploy to production:
+
+```bash
+vercel --prod
+```
+
+## Connect `stackforge.tech`
+
+1. Open the project in the Vercel dashboard.
+2. Go to Settings > Domains.
+3. Add `stackforge.tech`.
+4. Update DNS records at the domain provider as instructed by Vercel.
+5. Wait for DNS propagation and SSL certificate issuance.
+
+## Notes
+
+- Support email is set to `support@stackforge.tech`.
+- The site does not include payment collection, payment gateway integration, login, signup, or backend submission.
+- Payment options are shown for information only; no payment checkout is implemented on the website.
+- The contact form is a frontend-only UI and shows an email instruction after submit.
+- Policy text should be reviewed by the business owner or legal advisor before public launch.
